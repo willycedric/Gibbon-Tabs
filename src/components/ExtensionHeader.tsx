@@ -90,7 +90,7 @@ export default function ExtensionHeader({
           e.preventDefault();
           createTab("https://github.com/macadev/Gibbon-Tabs");
         }}
-        className="text-white text-lg tracking-wider italic ml-auto mr-4 cursor-pointer"
+        className="text-black text-lg tracking-wider italic ml-auto mr-4 cursor-pointer"
       >
         Gibbon Tabs
       </p>

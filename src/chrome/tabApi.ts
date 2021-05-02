@@ -25,7 +25,7 @@ export function createWindow(urls: string[]) {
         reject("Failed to create window.");
         return;
       }
-      resolve();
+      resolve({});
     });
   });
 }

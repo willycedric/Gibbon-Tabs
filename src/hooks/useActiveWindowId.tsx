@@ -6,6 +6,7 @@ export function useActiveWindowId() {
   let chrome: any = (window as any)["chrome"];
   useEffect(() => {
     chrome.windows.getCurrent({}, (windowData: any) => {
+      console.log('active window id', windowData.id);
       setActiveWindowId(windowData.id);
     });
   }, []);

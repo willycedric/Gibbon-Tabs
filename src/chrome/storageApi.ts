@@ -7,7 +7,7 @@ export function chromeStorageSet(objectToSave: object) {
         reject("Failed to store object. It's too large to sync.");
         return;
       }
-      resolve();
+      resolve({});
     });
   });
 }
@@ -27,7 +27,7 @@ export function chromeStorageGet(storageKey: string) {
 }
 
 export function chromeStorageRemove(storageKey: string) {
-  let chrome: any = (window as any)["chrome"];
+  let chrome:any = (window as any)["chrome"];
 
   return new Promise((resolve, reject) => {
     chrome.storage.sync.remove(storageKey, () => {
@@ -35,7 +35,7 @@ export function chromeStorageRemove(storageKey: string) {
         reject("Failed to remove object.");
         return;
       }
-      resolve();
+      resolve({});
     });
   });
 }
